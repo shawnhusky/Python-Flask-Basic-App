@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Home {% endblock %}
+
+{% block head %}
+
+        
+        <style>
+                .content-table
+                {
+                        border-collapse: collapse;
+                        margin: 25px;
+                        font-size: 1.25em;
+                        min-width: 400px;
+                }
+
+                .content-table thead tr
+                {
+                        background-color: rgb(8, 81, 99);
+                        color: white;
+                        text-align: center;
+                        font-weight: bold;
+                       
+                }
+
+                .content-table th,
+                .content-table td
+                {
+                    padding: 12px 15px;
+                }
+
+    
+
+                .content-table tbody tr
+                {
+                    border-bottom: 1px solid #dddddd
+                    
+                }
+                
+
+
+                
+        </style>
+        
+
+ <h1>Index</h1>       
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+
+
+<table class="content-table">
+
+    <thead>
+        <tr>
+            <th>Name</td>
+            <th>Email</td>
+            <th>Phone</td>
+        </tr>
+    </thead>
+
+{% for row in passdata %}
+    <tbody>
+        <tr>
+        
+            <th>{{ row.name}}</td>
+            <th>{{ row.email}}</td>
+            <th>{{ row.phone}}</td>
+        
+
+        </tr>
+     </tbody>
+
+   
+
+{% endfor %}
+
+</table>
+
+
+{% endblock %}
+
+
